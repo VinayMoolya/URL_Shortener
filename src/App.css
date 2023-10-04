@@ -1,38 +1,218 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  height: 80vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.inputContainer h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+}
+.inputContainer h1 span {
+  color: var(--primary-color);
+}
+.inputContainer input {
+  width: 100%;
+  padding: 0.5rem 0.2rem;
+  text-indent: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: antiquewhite;
+}
+.inputField {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+.shorten {
+  color: black;
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
+  background-color: var(--primary-color);
+  margin: 0 0.5rem;
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.result {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+.result p {
   color: white;
+  border: 2px solid var(--primary-color);
+  padding: 0.25rem 1rem;
+  border-radius: 5px;
+  margin-right: 1rem;
+  width: 100%;
+}
+.result button {
+  background: var(--primary-color);
+  padding: 0.25rem 1.5rem;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  color: white;
+  font-weight: 700;
+}
+.result button.copied {
+  background-color: white;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+.noData {
+  color: white;
+  font-size: 1rem;
+}
+/* Background Animate */
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: #4e54c8;
+  overflow: hidden;
+  z-index: -1;
+}
+.background li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 28s linear infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.background li:nth-child(0) {
+  left: 27%;
+  width: 107px;
+  height: 107px;
+  bottom: -107px;
+  animation-delay: 1s;
+}
+.background li:nth-child(1) {
+  left: 56%;
+  width: 164px;
+  height: 164px;
+  bottom: -164px;
+  animation-delay: 2s;
+}
+.background li:nth-child(2) {
+  left: 72%;
+  width: 141px;
+  height: 141px;
+  bottom: -141px;
+  animation-delay: 3s;
+}
+.background li:nth-child(3) {
+  left: 5%;
+  width: 123px;
+  height: 123px;
+  bottom: -123px;
+  animation-delay: 3s;
+}
+.background li:nth-child(4) {
+  left: 66%;
+  width: 165px;
+  height: 165px;
+  bottom: -165px;
+  animation-delay: 17s;
+}
+.background li:nth-child(5) {
+  left: 19%;
+  width: 155px;
+  height: 155px;
+  bottom: -155px;
+  animation-delay: 10s;
+}
+.background li:nth-child(6) {
+  left: 74%;
+  width: 103px;
+  height: 103px;
+  bottom: -103px;
+  animation-delay: 28s;
+}
+.background li:nth-child(7) {
+  left: 20%;
+  width: 133px;
+  height: 133px;
+  bottom: -133px;
+  animation-delay: 30s;
+}
+.background li:nth-child(8) {
+  left: 73%;
+  width: 103px;
+  height: 103px;
+  bottom: -103px;
+  animation-delay: 23s;
+}
+.background li:nth-child(9) {
+  left: 44%;
+  width: 159px;
+  height: 159px;
+  bottom: -159px;
+  animation-delay: 38s;
+}
+.background li:nth-child(10) {
+  left: 86%;
+  width: 164px;
+  height: 164px;
+  bottom: -164px;
+  animation-delay: 29s;
+}
+.background li:nth-child(11) {
+  left: 11%;
+  width: 161px;
+  height: 161px;
+  bottom: -161px;
+  animation-delay: 39s;
+}
+.background li:nth-child(12) {
+  left: 77%;
+  width: 122px;
+  height: 122px;
+  bottom: -122px;
+  animation-delay: 18s;
+}
+.background li:nth-child(13) {
+  left: 51%;
+  width: 113px;
+  height: 113px;
+  bottom: -113px;
+  animation-delay: 29s;
+}
+.background li:nth-child(14) {
+  left: 2%;
+  width: 140px;
+  height: 140px;
+  bottom: -140px;
+  animation-delay: 48s;
 }
